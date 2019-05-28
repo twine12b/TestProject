@@ -1,0 +1,4 @@
+insert into offer (has_expired, currency_code, description, expire, name, price, id) values ('0', 'uk0', 'description0', '20190612', 'name0', '9.99', '0');
+insert into offer (has_expired, currency_code, description, expire, name, price, id) values ('0', 'uk1', 'description1', '20190712', 'name1', '10.99', '1');
+insert into offer (has_expired, currency_code, description, expire, name, price, id) values ('0', 'uk2', 'description2', '20190812', 'name2', '11.99', '2');
+insert into offer (has_expired, currency_code, description, expire, name, price, id) values ('0', 'uk3', 'Expired', '20180512', 'name3', '12.99', '3');
