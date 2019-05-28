@@ -20,6 +20,8 @@ Solution
 ---
 As per brief, the service is accessed via *HTTP*.  The project will run locally on port 8080.  below is a list of url's to access the the functionality of the API.  Please append your local ip address e.g. [**http://192.168.0.2:8080/**worldpay/offers]  or [**http://localhost:8080/**worldpay/offers].  There is a SQL file named *offer.sql* database located in the resource directory.  When the application is run the SQL file will be used to populate the data base.  the data contains [1] expired record which will not be visible but will report in Json format that the Offer has expired. 
 
+This is a Spring Boot application. To get the program started run the program file **com/worldpay/WorldpayApplication.java**  
+
 ```
 [url's]
 1. /worldpay/offers - get all offers that have NOT expired.
