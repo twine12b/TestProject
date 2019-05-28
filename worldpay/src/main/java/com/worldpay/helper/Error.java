@@ -1,6 +1,5 @@
 package com.worldpay.helper;
 
-import javax.persistence.Entity;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement

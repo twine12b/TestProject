@@ -1,7 +1,5 @@
 package com.worldpay.web.rest;
 
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -10,12 +8,11 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,9 +28,6 @@ public class OfferRestControllerImpl implements OfferRestController {
 	
 	// Custom error messages
 	private final String err404 = "OfferNotFound";
-	private final String err400 = "InvalidArgument";
-	private final String err400DuplicateName = "DuplicateOfferName";
-	private final String err204 = "NoOffersFound";
 	private final String successDeleted = "OfferDeleted";
 	private final String errDeleted = "DeletionHasError";
 	private final String expired = "OfferHasExpired";
@@ -64,6 +58,7 @@ public class OfferRestControllerImpl implements OfferRestController {
 	/**
 	 * Get Offer by id
 	 */	
+	@SuppressWarnings("static-access")
 	@GetMapping(value = "/offers/{id}")
 	@ResponseBody
 	public ResponseEntity<?> getOfferById(@PathVariable Integer id) {
